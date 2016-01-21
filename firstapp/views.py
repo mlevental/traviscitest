@@ -19,6 +19,7 @@ class TestView(View):
         if request.is_ajax():
             self.send_email('Test Email', 'Test Message')
             return JsonResponse({'testKey': 'testValue'})
+
         else:
             return render(request, self.template_name)
 
