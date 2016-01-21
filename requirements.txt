@@ -1,2 +1,1 @@
-Django
-boto3
+Django==1.8.5
