@@ -2,15 +2,18 @@ language: python
 
 cache:
   pip: true
-  directories:
-    - /home/travis/virtualenv/python2.7.10
+
 python:
 - 2.7.10
 - 2.7.11
+
+before_script: chmod ugo+x test-script.sh
+
 script:
-- "echo $TRAVIS"
-- "echo $testvar"
+- echo $TRAVIS
+- echo $testvar
 - ./test-script.sh
+
 env:
   global:
   - secure: Z7NLWJrEhHit0utCUhM0ZjLJ270l2fqOMxYYUTUH+XWG4xbAZXEUBMAk1y/J+7m4t9n8J0FY9pxSIMKn4sElt4xW8YYI4gEn49NExsmWymak32Zj9iXEWIODYej85SxPlSL8rcDFK2gd+CeSslxIzv30f3q8GgtJ2qgyaXsy7ZtwZiXufv8/t9b91taCiOJSDmmNesyB2NXnMoHocEia5tMRukIy3Th7vYVwCqvBWCTzdaHDOaPpmczhp3sLvtHSimMCqCGAqVxFr/EWBmyxgvyxIaSnwC4P/graM0YWI9DryFP3uAZwnYvf5GQzA0PIhmF7S9bPUUYwWPA5bc8V26w4VPCZvAO40aYZEKdKrd7fFU+8YT/haN9V/rB2hVGnbeKzJNvIiFHLYvfwnbw423jab3X/vF2cqvaRPhC0ErDxl7nfBxwTAQYF3QClmAvx6ejGHVHZgXVzD1RFROnoFrxoOTMpELTadvDGO+gb1ITYebZJqLwJZSBMYscQVYySaOY4PwP/vvozYzY/JTp4F+m+PU5BuBHXqk0C3meazA2z4Xqsmvd74YU1b/VOgJgZ5OEV7mhEutu6iZ24bhoeOm29626YQlTxQDUpeaI4ELMHX1dr2+QhmDkQCawxBkG6AxOXToGVTfQJnbYBV0udEwv9BliL2Zek+Vpt1hfiu4A=
