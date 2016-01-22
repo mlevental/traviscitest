@@ -2,7 +2,8 @@ language: python
 python:
 - 2.7.10
 script:
-- "printenv"
+- "echo $TRAVIS"
+- "echo $MY_SECRET_ENV"
 env:
   global:
     secure: OSZ5LlrMOnU1xmUOOgdBHYV4j3WfXj/Tm9fRE/Ux0FdrCVyBkQziiphldpDHBPkg7MPZ/Z2aN7iu72r0yUoM0DSwhcFO/TWisfZAuYBrFvsO/5xlQfKzBx1MxBwnbStsVpV0XOhTWOg5InvR+2IRGdcq8VUdr3qoV34PLUKeV9eYiGiuJZanUvpEgYBcn/MmTr2aglNxzrEuP90/jGuPU2oyFVHCef+6uP4avq48tC6SjBLv4ovBY/doB45BAcnnjlvJ5ZBpKaZ1zj/yi+b9TQcGX4dZwILss38mfChkwZCBg3zX1TdPRhiV7oWKtcAq3g2xgUfOxsdkUzMmcqDwjYHs9ZF4ni4ApqUqvHNJ3NBl5uJQ+afiNq1TzKSsw6pTRAMAN0TosrfOKiUDcfE/1jYpJZ1Hp+sCdduN2s1ehfc/sreoXhn76P8A+8bpUnRyiRVw+4KR3ZWWmi7dep3cnjONn9g3sW8Qbk+aD447piTX2AQlZbt1f4XN8N9ES1+X/HutfeN4fZp+xIhY+gY2wbR05aScJWNKUCk1WzQo0BdSeiFGAeIJT9bpQHZhhrvaD8zAQ+Rfn3X5u5Bltct1uG4FyRsABrUGdGYjpy3CIYAAIrEsHBJvmOMFS86+X31IUkcYKQUgVOAIpL7eJsyevZAkuIZS8NBce/U1it8IXWQ=
