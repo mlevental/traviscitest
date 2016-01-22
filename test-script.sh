@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo ---------------------------- Unit Tests -----------------------------
+echo ----------------------------- Unit Tests -----------------------------
 python manage.py test firstapp.tests.test_ut
-echo ------------------------- Integration Tests -------------------------
+echo ------------------------- Integration Tests --------------------------
 python manage.py test firstapp.tests.test_it
