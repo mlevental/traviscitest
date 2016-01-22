@@ -2,8 +2,8 @@ language: python
 
 cache:
   pip: true
-  python: true
-
+  directories:
+    - /home/travis/virtualenv/
 python:
 - 2.7.10
 - 2.7.11
