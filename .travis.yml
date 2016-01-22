@@ -1,6 +1,8 @@
 language: python
 
-cache: pip
+cache:
+  pip: true
+  python: true
 
 python:
 - 2.7.10
@@ -8,9 +10,9 @@ python:
 script:
 - "echo $TRAVIS"
 - "echo $testvar"
-- "echo Unit Tests"
+- "echo ----- Unit Tests -----"
 - "python manage.py test firstapp.tests.test_ut"
-- "echo Integration Tests"
+- "echo ----- Integration Tests -----"
 - "python manage.py test firstapp.tests.test_it"
 env:
   global:
