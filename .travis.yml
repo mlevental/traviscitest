@@ -3,7 +3,7 @@ language: python
 cache:
   pip: true
   directories:
-    - /home/travis/virtualenv/
+    - /home/travis/virtualenv/python2.7.10
 python:
 - 2.7.10
 - 2.7.11
