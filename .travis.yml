@@ -7,12 +7,12 @@ python:
 - 2.7.10
 - 2.7.11
 
-before_script: chmod ugo+x test-script.sh
+before_script: chmod ugo+x tests-script.sh
 
 script:
 - echo $TRAVIS
 - echo $testvar
-- ./test-script.sh
+- ./tests-script.sh
 
 after_success: coveralls
 
