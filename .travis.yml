@@ -8,6 +8,8 @@ before_script: chmod ugo+x tests-script.sh
 script:
 - echo $TRAVIS
 - echo $testvar
+- echo KEY KEYKEYK EKYE KY EKY EK YKE YK E
+- echo $SECRET_KEY
 - "./tests-script.sh"
 after_success: coveralls
 env:
