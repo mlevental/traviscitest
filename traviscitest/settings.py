@@ -21,9 +21,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = '9m_=@k9qxx)1h(xvkwot-p*d417chbgnjiu$6pm=+1j=y)z#)o, THIS IS USELESS NOW'
-SECRET_KEY =''
-if os.getenv('TRAVIS'):
-    SECRET_KEY = os.getenv('SECRET_KEY')
+# SECRET_KEY = ''
+# if os.getenv('TRAVIS'):
+#     SECRET_KEY = os.getenv('SECRET_KEY')
+
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
