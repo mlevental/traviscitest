@@ -20,7 +20,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9m_=@k9qxx)1h(xvkwot-p*d417chbgnjiu$6pm=+1j=y)z#)o'
+# SECRET_KEY = '9m_=@k9qxx)1h(xvkwot-p*d417chbgnjiu$6pm=+1j=y)z#)o'
+# if os.getenv('BUILD_ON_TRAVIS'):
+#     SECRET_KEY = 'SecretKeyForUseOnTravis'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -74,20 +77,9 @@ WSGI_APPLICATION = 'traviscitest.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '3306',
-        'CHARSET': 'UTF8',
-        'TIME_ZONE': 'Europe/Berlin'
-    }
-}
 
 if 'test' in sys.argv:
+    DATABASES = {}
     DATABASES['default'] = {
         'ENGINE': 'django.db.backends.sqlite3',
         'TEST_CHARSET': 'UTF8',
